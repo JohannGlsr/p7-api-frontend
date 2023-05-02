@@ -41,7 +41,8 @@ if st.button("Analyser"):
     sequence = Preprocess_Sentence(phrase)
     data = {'sequence': sequence}
     #response = requests.post("https://jglsr.pythonanywhere.com/prediction", json=data)
-    response = requests.post("https://p7-api-backend.herokuapp.com/prediction", json=data)
+    #response = requests.post("https://p7-api-backend.herokuapp.com/prediction", json=data)
+    response = requests.post("https://p7-backend.herokuapp.com/prediction", json=data)
     # Traiter la réponse de l'API
     if response.status_code == 200:
         result = response.json()
